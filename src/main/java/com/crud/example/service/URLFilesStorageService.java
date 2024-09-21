@@ -19,4 +19,6 @@ public interface URLFilesStorageService {
     public void deleteAll();
 
     public Stream<Path> loadAll();
+
+    public boolean delete(String filename);
 }

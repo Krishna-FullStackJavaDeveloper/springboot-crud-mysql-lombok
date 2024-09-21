@@ -282,6 +282,29 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "DeleteFile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/Url_file/files/my pic.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"Url_file",
+								"files",
+								"my pic.jpg"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

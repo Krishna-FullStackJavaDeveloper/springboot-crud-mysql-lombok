@@ -58,4 +58,24 @@ public class UrlFilesController {
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.name() + "\"").body(file);
     }
+
+    @DeleteMapping("/files/{filename:.+}")
+    public ResponseEntity<ResponseMessage> deleteFile(@PathVariable String filename) {
+        String message = "";
+
+        try {
+            boolean existed = urlFilesStorageService.delete(filename);
+
+            if (existed) {
+                message = "Delete the file successfully: " + filename;
+                return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
+            }
+
+            message = "The file does not exist!";
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseMessage(message));
+        } catch (Exception e) {
+            message = "Could not delete the file: " + filename + ". Error: " + e.getMessage();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ResponseMessage(message));
+        }
+    }
 }

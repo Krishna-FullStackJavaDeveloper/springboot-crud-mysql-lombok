@@ -73,4 +73,14 @@ public class URLFilesStorageServiceImpl implements URLFilesStorageService {
             throw new RuntimeException("Could not load the files!");
         }
     }
+
+    @Override
+    public boolean delete(String filename) {
+        try{
+            Path file = root.resolve(filename);
+            return Files.deleteIfExists(file);
+        }catch (IOException e){
+            throw new RuntimeException("Error: " +e.getMessage());
+        }
+    }
 }
