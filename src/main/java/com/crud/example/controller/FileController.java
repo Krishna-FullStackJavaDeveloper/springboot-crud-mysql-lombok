@@ -3,7 +3,7 @@ package com.crud.example.controller;
 import com.crud.example.entity.FileDB;
 import com.crud.example.message.ResponseFile;
 import com.crud.example.message.ResponseMessage;
-import com.crud.example.service.FileStorageService;
+import com.crud.example.serviceImpl.FileStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

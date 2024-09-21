@@ -1,4 +1,4 @@
-package com.crud.example.service;
+package com.crud.example.serviceImpl;
 
 import com.crud.example.entity.FileDB;
 import com.crud.example.repository.FileDBRepository;

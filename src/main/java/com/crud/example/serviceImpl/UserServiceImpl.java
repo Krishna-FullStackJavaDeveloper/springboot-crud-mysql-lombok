@@ -1,20 +1,18 @@
-package com.crud.example.service;
+package com.crud.example.serviceImpl;
 
+import com.crud.example.service.UserService;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import com.crud.example.entity.User;
 import com.crud.example.repository.UserRepository;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
 	private UserRepository userRepository;
 

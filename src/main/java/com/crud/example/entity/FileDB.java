@@ -26,6 +26,7 @@ public class FileDB {
     private String type;
 
     @Lob
+    @Column(name = "data", columnDefinition = "LONGBLOB")
     private byte[] data;
 
     public FileDB(String name, String type, byte[] data) {
